@@ -1,13 +1,14 @@
 const config = require("./config/index")
 const inquirer = require('inquirer')
-/* 
-  Question:{
+/** 
+  inquirer.prompt(questions:Questions[] , answers) -> promise
+  @param questions {Questions[]}
+  @Questions {
     type: (String) input, number, confirm, list, rawlist, expand, checkbox, password, editor，默认input
     name: (String)  返回 answers 对象的key值 {压缩的文件:xxx}
   }
-  Questions:Question[]
-  inquirer.prompt(questions:Questions , answers) -> promise
 
+  Questions:Question[]
 */
 inquirer.prompt([{
   type: 'confirm',

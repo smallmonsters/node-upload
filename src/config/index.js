@@ -15,9 +15,8 @@ config.js
   🎉现已更新模块引用逻辑，远端备份时间格式改为 `yyyy-MM-dd_HH:mm:ss`
   */
 const path = require("path")
-const { IP, PW,PORT } = require("../constant/index")
+const { IP, PW, PORT } = require("../constant/index")
 
-console.log(IP, PW)
 const config = {
   name: '项目A-dev',
   ssh: {
@@ -28,7 +27,7 @@ const config = {
     // privateKey: 'E:/id_rsa', // ssh私钥(不使用此方法时请勿填写， 注释即可)
     passphrase: '123456' // ssh私钥对应解密密码(不存在设为''即可)
   },
-  targetDir: path.join(__dirname, 'build'), // 目标压缩目录(可使用相对地址)
+  targetDir: path.join(__dirname, "../../", "build"), // 目标压缩目录(可使用相对地址)
   targetFile: 'build.zip', // 目标文件
   openCompress: true, // 是否开启本地压缩
   openBackUp: true, // 是否开启远端备份

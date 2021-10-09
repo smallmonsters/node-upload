@@ -13,6 +13,7 @@
    - 删除、上传和解压后实现提示
   > 参考：  
   > <font size=2>[从零开始 Node实现前端自动化部署](https://www.jianshu.com/p/312f3be018de)</font>
+4. 增加一个打包信息文件
 
 ##### 依赖
 
