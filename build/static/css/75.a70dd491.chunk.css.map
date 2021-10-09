@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/pages/purchaseManagement/standingBook/style.less"],"names":[],"mappings":"AAAA,wBACE,UAAA,CACA,WAAA,CACA,YAAA,CACA,qBACF","file":"75.a70dd491.chunk.css","sourcesContent":[".purchase_standing_book {\n  width: 100%;\n  height: 100%;\n  padding: 20px;\n  background-color: #fff;\n}\n@primary-color: #1890ff;"]}
