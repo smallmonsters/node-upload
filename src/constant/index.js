@@ -1,3 +1,11 @@
-exports.IP = require("./private").IP // 服务器ip
-exports.PW = require("./private").PW // 服务器密码
-exports.PW = require("./private").PORT // 服务器端口
+import path from "path"
+// import CONFIG from path.resolve(process.cwd(), "./deploy.config.js")
+import { config } from "../../deploy.config.js"
+
+// export const CONFIG = require(path.resolve(process.cwd(), "./deploy.config.js"));
+// export const CONFIG = path.resolve(process.cwd(), "./deploy.config.js")
+export const CONFIG = config
+console.log(CONFIG)
+// 文件夹位置
+export const distDir = path.resolve(process.cwd(), CONFIG.DIST || './dist');
+export const distZipPath = path.resolve(process.cwd(), "./dist.zip");

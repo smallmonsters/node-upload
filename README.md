@@ -20,3 +20,6 @@
 1、[node-ssh](https://www.npmjs.com/package/node-ssh)：使node可以进行ssh链接  
 2、[archiver](https://www.npmjs.com/package/archiver)：压缩文件  
 2、[inquirer](https://www.npmjs.com/package/inquirer)：交互式命令行  
+
+##### archiver相关记录
+1. 如何创建目录
