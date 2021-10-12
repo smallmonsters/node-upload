@@ -4,7 +4,7 @@ import { defaultLog } from "./print.js"
 
 // ********* 执行清空线上文件夹指令 *********
 export const runCommond = async (commond, SSH) => {
-  const result = await SSH.exec(commond, [], { cwd: CONFIG.PATH });
+  const result = await SSH.exec(commond, [], { cwd: CONFIG.PWD });
   console.log(chalk.yellow(result));
 };
 
@@ -13,6 +13,7 @@ export const runBeforeCommand = async (SSH) => {
   const COMMONDS = CONFIG.COMMONDS || [];
   defaultLog("执行前置命令");
   for (let i = 0; i < COMMONDS.length; i++) {
+    defaultLog(`执行命令${COMMONDS[i]}`);
     await runCommond(COMMONDS[i], SSH);
   }
 };

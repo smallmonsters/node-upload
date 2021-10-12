@@ -8,10 +8,11 @@ export const uploadZipBySSH = async (SSH) => {
   // 上传文件
   let spinner = ora("准备上传文件").start();
   try {
-    await SSH.putFile(distZipPath, CONFIG.PATH + "/dist.zip");
+    await SSH.putFile(distZipPath, CONFIG.PWD + "/dist.zip");
     successLog("完成上传");
     spinner.text = "完成上传, 开始解压";
-    await runCommond("unzip -o ./dist.zip", SSH);
+    await runCommond(`unzip -o ./dist.zip -d ${CONFIG.PATH}`, SSH);
+    await runCommond("rm -rf ./dist.zip", SSH);
     spinner.stop();
     successLog("部署完成");
     process.exit(0);
