@@ -1,6 +1,6 @@
 // const fs = require("fs");
 // const path = require("path");
-// // const ora = require("ora");
+// const ora = require("ora");
 // const zipper = require("zip-local");
 // const shell = require("shelljs");
 // const chalk = require("chalk");
@@ -8,12 +8,12 @@
 // const inquirer = require("inquirer");
 // const NodeSSH = require("node-ssh").NodeSSH;
 
-// import fs from "fs"
-// import path from "path"
-// import ora from "ora"
-// import zipper from "zip-local"
-// import shell from "shelljs"
-// import inquirer from "inquirer"
+import fs from "fs"
+import path from "path"
+import ora from "ora"
+import zipper from "zip-local"
+import shell from "shelljs"
+import inquirer from "inquirer"
 
 import { compileDist } from "./compileDist.js"
 import { zipDist } from "./zipDist.js"
